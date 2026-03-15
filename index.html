@@ -7,47 +7,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/examples/jsm/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid" style="margin: 0px; background-color: black;">
         <div class="row">
-            <div class="col-12">
-                <h1>Bootstrap 4</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+            <div class="col-12 text-white">
+                <div>
+                    <nav class="navbar navbar-expand-lg navbar-light text-white fixed-top" style="background-color: black; margin: 0px;">
+                        <a class="navbar-brand" href="#">
+                            <img src="https://res.cloudinary.com/dncjumwee/image/upload/v1748877726/LOGO_koclk3.jpg" width="40" height="40" class="rounded-circle d-inline-block align-top" alt="" loading="lazy">
+                            College Notes
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav ml-auto">
+                            <a class="nav-link active ml-2 mr-2 text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link ml-2 mr-2 text-white" href="#">About</a>
+                            <a class="nav-link text-white text-decoration-underline" href="#">Projects</a>
+                            <div class="ml-2 mr-2">
+                                <div class="dropdown">
+                                    <a class="btn btn-transparent dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Notes
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item text-dark" href="#">Action</a>
+                                        <a class="dropdown-item text-dark" href="#">Another action</a>
+                                        <a class="dropdown-item text-dark" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="nav-link text-white text-decoration-underline" href="#">Contact</a>
+                            
+                            
+                            <div class="ml-5">
+                                <button class="btn btn-outline-light mr-2 rounded-pill">Login</button>
+                                <button class="btn btn-outline-light rounded-pill">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+                    </nav>
+                </div>
+
             </div>
         </div>
 
         <!--// 2nd page //-->
         <div>
             <div class="row">
-                <div class="col-6">
-                    <h2>Column 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
-                </div>
-                <div class="col-6">
-                    <h2>Column 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                <div class="col-12 animation-section d-flex flex-column">
+                    <div id="animation-container" style="width:100%; height:100vh; background-color:transparent; position: relative; overflow: hidden;">
+                        <div class="d-flex flex-column justify-content-center align-items-center text-white bg-transparent text-center" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; pointer-events: none;">
+                            <h1 class="heading bg-transparent" id="developer-name">Wellcome to Our Website</h1>
+                            <p class="paragraph bg-transparent mx-auto px-4 pb-5" style="max-width: 900px;">This web is designed to showcase our work ,werewe will be working on different types of projects,which incluides Fronted ,backend development,and majarly we will be working on the aiml projects and we will be building the hands on projects of differents of automations, and more in further days which will me  related to AI.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+    <!--till here all is one home page-->
         <!--// 3rd page //-->
         <div>
-            <div class="row">
-                <div class="col-4">
-                    <h2>Column 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+            <div class="row about-section">
+                <div class="col-6 d-flex flex-column justify-content-center align-items-start text-white p-5">
+                    <h1 class="heading">About Us</h1>
+                    <p class="paragraph">Learn more about our team and what we do.</p>
                 </div>
-                <div class="col-4">
-                    <h2>Column 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                <div class="col-6">
+                    <p>good</p>
                 </div>
-                <div class="col-4">
-                    <h2>Column 3</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
-                </div>
-            </div>
         </div>
 
         <!--// 4th page //-->
@@ -72,9 +111,15 @@
             </div>
         </div>
 
-
     </div>
 
-
+    <!-- Initialize the animation -->
+    <script type="module">
+        import { ParticlesSwarm } from './script.js';
+        const container = document.getElementById('animation-container');
+        if (container) {
+            new ParticlesSwarm(container, 5000); // 5000 particles to run smoothly
+        }
+    </script>
 </body>
 </html>
