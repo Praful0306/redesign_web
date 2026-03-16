@@ -106,13 +106,19 @@ body, html {
 }
 
 .box{
-    height:70vh;
+    height:68vh;
     width:50vw;
     /*background: url('https://res.cloudinary.com/dncjumwee/image/upload/v1773551479/pngtree-nature-high-resolution-desktop-wallpaper-hd-image_16414250_njhtko.jpg');*/
     background-size: cover;
     border-radius: 30px;
-    scrollbar-highlight-color: aquamarine;
+    box-shadow: 0 20px 40px rgba(0, 108, 224, 0.973) !important;
+    transition: box-shadow 0.1s ease-in-out;
+} 
+
+.box:hover {
+    box-shadow: 0 15px 40px rgb(6, 241, 116) !important;
 }
+
 .boxs{
     height:60vh;
     width:40vw;
@@ -121,8 +127,13 @@ body, html {
     align-items:center;
 }
 
+
+
 .about{
     font-size:27px;
+
     
     
 }
+
+
