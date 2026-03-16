@@ -105,26 +105,24 @@ body, html {
     background-color: transparent;
 }
 
-
-.information-section {
-    background-color: #1ae148;
-    height:50vh;
-    width:45vw;
+.box{
+    height:70vh;
+    width:50vw;
+    /*background: url('https://res.cloudinary.com/dncjumwee/image/upload/v1773551479/pngtree-nature-high-resolution-desktop-wallpaper-hd-image_16414250_njhtko.jpg');*/
+    background-size: cover;
+    border-radius: 30px;
+    scrollbar-highlight-color: aquamarine;
+}
+.boxs{
+    height:60vh;
+    width:40vw;
+    background: url('https://res.cloudinary.com/dncjumwee/image/upload/v1773551479/pngtree-nature-high-resolution-desktop-wallpaper-hd-image_16414250_njhtko.jpg');
+    background-size: cover;
+    align-items:center;
 }
 
-.image-section {
-    background-color: #3109d1;
-    height:50vh;
-    width:45vw;
-}
-
-.about-section {
-    background-color: #c71313;
-    height:100vh;
-    width:100vw;
-}
-.box {
-    height: 40vh;
-    width: 40vw ;
-    background-color: #fff;
+.about{
+    font-size:27px;
+    
+    
 }

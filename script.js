@@ -126,3 +126,4 @@ window.addEventListener("scroll", function() {
         developerName.style.backgroundImage = "linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)";
     }
 });
+
