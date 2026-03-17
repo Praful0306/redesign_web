@@ -106,12 +106,12 @@ body, html {
 }
 
 .box{
-    height:68vh;
+    height:70vh;
     width:50vw;
     /*background: url('https://res.cloudinary.com/dncjumwee/image/upload/v1773551479/pngtree-nature-high-resolution-desktop-wallpaper-hd-image_16414250_njhtko.jpg');*/
     background-size: cover;
     border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0, 108, 224, 0.973) !important;
+    box-shadow: 0 20px 30px rgba(252, 254, 255, 0.973) !important;
     transition: box-shadow 0.1s ease-in-out;
 } 
 
@@ -121,19 +121,79 @@ body, html {
 
 .boxs{
     height:60vh;
-    width:40vw;
-    background: url('https://res.cloudinary.com/dncjumwee/image/upload/v1773551479/pngtree-nature-high-resolution-desktop-wallpaper-hd-image_16414250_njhtko.jpg');
-    background-size: cover;
+    width:30vw;
+    background: transparent;
     align-items:center;
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.25);
+}
+
+.profile-animation-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: transparent;
+}
+
+.profile-animation-bg canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    background: transparent !important;
+}
+
+.profile-image-layer {
+    position: absolute;
+    inset: 12%;
+    z-index: 2;
+    border: 2px dashed rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.rolling-text {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.rolling-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: rolling-left 42s linear infinite;
+    will-change: transform;
+}
+
+.rolling-track > * {
+    flex: 0 0 auto;
+}
+
+.rolling-track img {
+    max-height: 100%;
+    width: auto;
+}
+
+@keyframes rolling-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 
 
 .about{
-    font-size:27px;
-
-    
-    
+    font-size:15px;
 }
 
-
+.margin-bottom{
+    margin-bottom: 50px;
+    
+}
